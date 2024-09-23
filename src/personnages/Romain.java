@@ -5,6 +5,9 @@ public class Romain {
 	private int force;
 
 	public Romain(String nom, int force) {
+		if (force<0) {
+			throw new IllegalArgumentException("force negative") ;
+		}
 		this.nom = nom;
 		this.force = force;
 	}
