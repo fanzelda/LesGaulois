@@ -5,6 +5,7 @@ public class Romain {
 	private int force;
 	private Equipement[] equipements = new Equipement[2];
 	private int nbEquipements = 0;
+	private boolean vainqueur = false;
 
 	public Romain(String nom, int force) {
 		if (force < 0) {
@@ -45,7 +46,11 @@ public class Romain {
 		forceCoup = calculResistanceEquipement(forceCoup);
 		if (forceCoup >= 0) {
 			force -= forceCoup;
+		}else {
+			parler("Tu ne m'as pas touche");
+			vainqueur=true;
 		}
+		
 		assert verifierforce();
 		 if (force > 0) {
 		 parler("Aïe");
@@ -73,7 +78,7 @@ public class Romain {
 					System.out.println("Equipement casque");
 					resistanceEquipement += 5;
 				}
-
+   
 			}
 			texte = texte + "\nMais heureusement, grace à mon équipement sa force est diminué de "
 					+ resistanceEquipement + "!";
@@ -145,4 +150,10 @@ public class Romain {
 		return force;
 	}
 
+	public boolean isVainqueur() {
+		return vainqueur;
+	}
+
+	
+	
 }
