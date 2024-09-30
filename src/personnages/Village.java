@@ -1,6 +1,5 @@
 package personnages;
 
-import java.util.Iterator;
 
 public class Village {
 	private String nom;
