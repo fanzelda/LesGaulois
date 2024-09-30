@@ -4,9 +4,9 @@ import personnages.Druide;
 import personnages.Equipement;
 import personnages.Gaulois;
 import personnages.Romain;
-import villagegaulois.Musee;
+//import villagegaulois.Musee;
 
-public class Scenario {
+public class Scenario2 {
 
 	public static void main(String[] args) {
 		Druide druide = new Druide("Panoramix", 5, 10);
