@@ -1,4 +1,5 @@
 package personnages;
+import villagegaulois.Musee;
 
 public class Gaulois {
 
@@ -51,6 +52,20 @@ public class Gaulois {
 //	public String toString() {
 //		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 //	}
+	
+	public void faireUneDonation(Musee musee) {
+		if (nbtrophees > 0) {
+			String texte = "Je donne au musee tous mes trophees :";
+			while (nbtrophees > 0) {
+				nbtrophees--;
+				musee.donnerTrophees(this, trophees[nbtrophees]);
+				texte += "\n - " + trophees[nbtrophees];
+				trophees[nbtrophees] = null;
+			}
+			parler(texte);
+		}
+	}
+
 
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Astérix", 8);

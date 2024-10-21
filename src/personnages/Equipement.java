@@ -12,4 +12,10 @@ public enum Equipement {
 	public String toString() {
 		return nom;
 	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	
 }
